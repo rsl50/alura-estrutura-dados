@@ -22,5 +22,11 @@ public class VetorTeste {
 
         lista.remove(1);
         System.out.println(lista);
+
+        for (int i = 0; i < 300; i++) {
+            Aluno a = new Aluno("Carlos " + i);
+            lista.adiciona(a);
+        }
+        System.out.println(lista);
     }
 }
