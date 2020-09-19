@@ -2,7 +2,7 @@ public class VetorTeste {
 
     public static void main(String[] args) {
         Aluno a1 = new Aluno("João");
-        Aluno a2 = new Aluno("Jose");
+        Aluno a2 = new Aluno("José");
 
         Vetor lista = new Vetor();
         System.out.println(lista.tamanho());
@@ -17,6 +17,8 @@ public class VetorTeste {
         Aluno a3 = new Aluno("Danilo");
         System.out.println(lista.contem(a3));
 
-        System.out.println(lista.pega(200));
+        lista.adiciona(1, a3);
+        System.out.println(lista);
+
     }
 }
