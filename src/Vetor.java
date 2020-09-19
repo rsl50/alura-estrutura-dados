@@ -23,16 +23,32 @@ public class Vetor {
 
     }
 
-    public Aluno pega(Aluno aluno) {
-        return null;
+    private boolean posicaoOcupada(int posicao) {
+        return posicao >= 0 && posicao < totalDeAlunos;
+    }
+
+    public Aluno pega(int posicao) {
+
+        if (!posicaoOcupada(posicao)) {
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        return alunos[posicao];
     }
 
     public boolean contem(Aluno aluno) {
+
+        //Complexidade O(n)
+        for (int i = 0; i < totalDeAlunos; i++) {
+            if (aluno.equals(alunos[i])) {
+                return true;
+            }
+        }
+
         return false;
     }
 
     public int tamanho() {
-        return 0;
+        return totalDeAlunos;
     }
 
     public String toString() {

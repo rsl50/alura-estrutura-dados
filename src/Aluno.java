@@ -13,6 +13,7 @@ public class Aluno {
 
     @Override
     public boolean equals(Object obj) {
+        if (obj == null) return false;
         Aluno aluno = (Aluno) obj;
         return aluno.getNome().equals(this.nome);
     }
