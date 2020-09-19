@@ -28,7 +28,6 @@ public class Vetor {
     }
 
     public Aluno pega(int posicao) {
-
         if (!posicaoOcupada(posicao)) {
             throw new IllegalArgumentException("Posição inválida");
         }
