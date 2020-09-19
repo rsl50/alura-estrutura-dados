@@ -37,8 +37,13 @@ public class Vetor {
         totalDeAlunos++;
     }
 
-    public void remove(Aluno aluno) {
+    public void remove(int posicao) {
+        //Complexidade O(n)
+        for (int i = posicao; i < this.totalDeAlunos; i++) {
+           this. alunos[i] = alunos[i + 1];
+        }
 
+        totalDeAlunos--;
     }
 
     private boolean posicaoOcupada(int posicao) {

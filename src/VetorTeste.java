@@ -20,5 +20,7 @@ public class VetorTeste {
         lista.adiciona(1, a3);
         System.out.println(lista);
 
+        lista.remove(1);
+        System.out.println(lista);
     }
 }
