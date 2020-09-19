@@ -1,3 +1,5 @@
+package vetor;
+
 import java.util.Objects;
 
 public class Aluno {
