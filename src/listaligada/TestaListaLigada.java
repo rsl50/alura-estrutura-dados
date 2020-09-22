@@ -45,6 +45,7 @@ public class TestaListaLigada {
         lista.remove(3);
         System.out.println(lista);
 
-
+        System.out.println(lista.contem("Robson"));
+        System.out.println(lista.contem("Danilo"));
     }
 }

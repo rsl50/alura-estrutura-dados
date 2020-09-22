@@ -119,7 +119,16 @@ public class ListaLigada {
         return this.totalDeElementos;
     }
 
-    public boolean contem(Object o) {
+    public boolean contem(Object obj) {
+        Celula atual = this.primeira;
+
+        while (atual != null) {
+            if (atual.getElemento().equals(obj)) {
+                return true;
+            }
+
+            atual = atual.getProximo();
+        }
 
         return false;
     }
