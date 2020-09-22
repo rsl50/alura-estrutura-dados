@@ -23,12 +23,11 @@ public class ListaLigada {
     }
 
     public void adicionaNoFim(Object elemento) {
-
         if (this.totalDeElementos == 0) {
             adicionaNoComeco(elemento);
         } else {
             Celula nova = new Celula(elemento);
-            this.ultimo.setAnterior(nova);
+            this.ultimo.setProximo(nova);
             nova.setAnterior(this.ultimo);
             this.ultimo = nova;
             this.totalDeElementos++;
@@ -58,14 +57,15 @@ public class ListaLigada {
         if (posicao == 0) {
             adicionaNoComeco(elemento);
         } else if (posicao == this.totalDeElementos) {
-            adicionaNoFim(elemento);
+            this.adicionaNoFim(elemento);
         } else {
-            // Pega a posição anterior, vê qual era a próxima célula e atribui isso
-            // na nova celula, por fim coloca a nova célula como próxima da celula
-            // anterior
             Celula anterior = this.pegaCelula(posicao - 1);
+            Celula proxima = anterior.getProximo();
+
             Celula nova = new Celula(elemento, anterior.getProximo());
+            nova.setAnterior(anterior);
             anterior.setProximo(nova);
+            proxima.setAnterior(nova);
             this.totalDeElementos++;
         }
     }
@@ -107,7 +107,7 @@ public class ListaLigada {
             return "[]";
         }
 
-        Celula atual = primeira;
+        Celula atual = this.primeira;
 
         StringBuilder builder = new StringBuilder();
         builder.append("[");
