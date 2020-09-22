@@ -32,5 +32,6 @@ public class TestaListaLigada {
         System.out.println(lista);
         System.out.println(lista.tamanho());
 
+
     }
 }
