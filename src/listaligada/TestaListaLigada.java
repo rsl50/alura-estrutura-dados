@@ -27,5 +27,10 @@ public class TestaListaLigada {
         System.out.println(a);
         System.out.println(lista.tamanho());
 
+        // Teste remover item do começo da lista
+        lista.removeDoComeco();
+        System.out.println(lista);
+        System.out.println(lista.tamanho());
+
     }
 }
