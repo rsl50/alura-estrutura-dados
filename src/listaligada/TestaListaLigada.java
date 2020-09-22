@@ -37,6 +37,14 @@ public class TestaListaLigada {
         System.out.println(lista);
         System.out.println(lista.tamanho());
 
+        // Teste remoção de qualquer posição
+        lista.adicionaNoFim("José");
+        lista.adicionaNoFim("João");
+        System.out.println(lista);
+
+        lista.remove(3);
+        System.out.println(lista);
+
 
     }
 }

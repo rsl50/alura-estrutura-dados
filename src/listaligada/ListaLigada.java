@@ -93,14 +93,26 @@ public class ListaLigada {
         } else {
             Celula penultima = this.ultimo.getAnterior();
             penultima.setProximo(null);
-            this.anterior = penultima;
+            this.ultimo = penultima;
             this.totalDeElementos--;
         }
     }
 
-    public Object remove(int posicao) {
+    public void remove(int posicao) {
+        if (posicao == 0) {
+            removeDoComeco();
+        } else if (posicao == this.totalDeElementos - 1) {
+            removeDoFim();
+        }
 
-        return null;
+        Celula anterior = this.pegaCelula(posicao - 1);
+        Celula atual = anterior.getProximo();
+        Celula proxima = atual.getProximo();
+
+        anterior.setProximo(proxima);
+        proxima.setAnterior(anterior);
+
+        this.totalDeElementos--;
     }
 
     public int tamanho() {
@@ -118,16 +130,16 @@ public class ListaLigada {
             return "[]";
         }
 
-        Celula atual = this.primeira;
+        Celula atual = primeira;
+        StringBuilder builder = new StringBuilder("[");
 
-        StringBuilder builder = new StringBuilder();
-        builder.append("[");
         for (int i = 0; i < totalDeElementos; i++) {
             builder.append(atual.getElemento());
-            builder.append(", ");
+            builder.append(",");
 
             atual = atual.getProximo();
         }
+
         builder.append("]");
 
         return builder.toString();
