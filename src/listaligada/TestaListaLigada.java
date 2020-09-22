@@ -32,6 +32,11 @@ public class TestaListaLigada {
         System.out.println(lista);
         System.out.println(lista.tamanho());
 
+        // Teste remover item do final da lista
+        lista.removeDoFim();
+        System.out.println(lista);
+        System.out.println(lista.tamanho());
+
 
     }
 }

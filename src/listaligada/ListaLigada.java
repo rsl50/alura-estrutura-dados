@@ -87,6 +87,17 @@ public class ListaLigada {
         }
     }
 
+    public void removeDoFim() {
+        if (this.totalDeElementos == 1) {
+            removeDoComeco();
+        } else {
+            Celula penultima = this.ultimo.getAnterior();
+            penultima.setProximo(null);
+            this.anterior = penultima;
+            this.totalDeElementos--;
+        }
+    }
+
     public Object remove(int posicao) {
 
         return null;
