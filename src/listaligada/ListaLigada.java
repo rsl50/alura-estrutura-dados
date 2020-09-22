@@ -65,8 +65,7 @@ public class ListaLigada {
     }
 
     public Object pega(int posicao) {
-
-        return null;
+        return this.pegaCelula(posicao).getElemento();
     }
 
     public Object remove(int posicao) {
@@ -75,8 +74,7 @@ public class ListaLigada {
     }
 
     public int tamanho() {
-
-        return 0;
+        return this.totalDeElementos;
     }
 
     public boolean contem(Object o) {

@@ -21,5 +21,11 @@ public class TestaListaLigada {
         // Teste de adicionar itens no meio da lista
         lista.adiciona(2, "Gabriel");
         System.out.println(lista);
+
+        // Teste pegar item de posição da lista e tamanho da lista
+        Object a = lista.pega(2);
+        System.out.println(a);
+        System.out.println(lista.tamanho());
+
     }
 }
