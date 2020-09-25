@@ -1,5 +1,7 @@
 package pilha;
 
+import java.util.Stack;
+
 public class TestePilha {
 
     public static void main(String[] args) {
@@ -21,5 +23,19 @@ public class TestePilha {
         System.out.println(pilha.vazio());
         pilha.push("Robson");
         System.out.println(pilha.vazio());
+
+        // O Java possui a implementação da pilha internamente
+        Stack<String> stack = new Stack<>();
+        stack.push("Maurício");
+        stack.push("Marcelo");
+        System.out.println(stack);
+        stack.pop();
+        System.out.println(stack);
+
+        // O peek só retorna o elemento no topo da pilha sem removê-lo
+        String nome = stack.peek();
+        System.out.println(nome);
+        System.out.println(stack);
+
     }
 }
