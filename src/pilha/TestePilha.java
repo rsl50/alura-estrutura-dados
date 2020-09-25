@@ -36,6 +36,5 @@ public class TestePilha {
         String nome = stack.peek();
         System.out.println(nome);
         System.out.println(stack);
-
     }
 }

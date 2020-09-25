@@ -6,11 +6,11 @@ public class Fila {
 
     LinkedList<String> nomes = new LinkedList();
 
-    public void adiciona(String nome) {
+    public void add(String nome) {
         nomes.add(nome);
     }
 
-    public String remove() {
+    public String poll() {
         return nomes.remove(0);
     }
 
