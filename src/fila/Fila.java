@@ -11,11 +11,11 @@ public class Fila {
     }
 
     public String remove() {
-        return null;
+        return nomes.remove(0);
     }
 
     public boolean vazio() {
-        return false;
+        return nomes.isEmpty();
     }
 
     @Override
