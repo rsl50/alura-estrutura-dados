@@ -11,7 +11,7 @@ public class Pilha {
     }
 
     public String remove() {
-        return null;
+        return nomes.remove(nomes.size() - 1);
     }
 
     public boolean vazio() {
