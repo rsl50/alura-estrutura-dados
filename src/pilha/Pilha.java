@@ -6,16 +6,16 @@ public class Pilha {
 
     private LinkedList<String> nomes = new LinkedList();
 
-    public void insere(String nome) {
+    public void push(String nome) {
         nomes.add(nome);
     }
 
-    public String remove() {
+    public String pop() {
         return nomes.remove(nomes.size() - 1);
     }
 
     public boolean vazio() {
-        return false;
+        return nomes.isEmpty();
     }
 
     @Override

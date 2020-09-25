@@ -6,16 +6,20 @@ public class TestePilha {
         Pilha pilha = new Pilha();
 
         // Teste inserção na pilha
-        pilha.insere("Robson");
+        pilha.push("Robson");
         System.out.println(pilha);
-        pilha.insere("Guilherme");
+        pilha.push("Guilherme");
         System.out.println(pilha);
 
         // Teste remoção na pilha
-        String r1 = pilha.remove();
+        String r1 = pilha.pop();
         System.out.println(r1);
-        String r2 = pilha.remove();
+        String r2 = pilha.pop();
         System.out.println(r2);
         System.out.println(pilha);
+
+        System.out.println(pilha.vazio());
+        pilha.push("Robson");
+        System.out.println(pilha.vazio());
     }
 }
