@@ -24,7 +24,7 @@ public class TesteDoConjunto {
         conjunto.remove("Mauricio");
         System.out.println(conjunto);
 
-        
+
         Set<String> conjuntoDoJava = new HashSet<String>();
         conjuntoDoJava.add("Mauricio");
         conjuntoDoJava.add("Paulo");
