@@ -30,4 +30,8 @@ public class Conjunto {
         return palavra.toLowerCase().charAt(0) % 26;
     }
 
+    @Override
+    public String toString() {
+        return tabela.toString();
+    }
 }
