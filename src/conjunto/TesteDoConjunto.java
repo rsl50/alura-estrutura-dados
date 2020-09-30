@@ -1,5 +1,8 @@
 package conjunto;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class TesteDoConjunto {
 
     public static void main(String[] args) {
@@ -17,8 +20,14 @@ public class TesteDoConjunto {
         conjunto.adiciona("Guilherme");
         System.out.println(conjunto);
 
-        
+
         conjunto.remove("Mauricio");
         System.out.println(conjunto);
+
+        
+        Set<String> conjuntoDoJava = new HashSet<String>();
+        conjuntoDoJava.add("Mauricio");
+        conjuntoDoJava.add("Paulo");
+        System.out.println(conjuntoDoJava);
     }
 }
